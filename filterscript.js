@@ -46,7 +46,8 @@ let observer = new MutationObserver(function(mutations) {
             console.log('found post element node');
             for(let j = 0; j < innernodesaarray.length; j++){
                 insertedNodes.push(innernodesaarray[j]);
-                //$(innernodesaarray[j]).parent().hide();
+                if(nodesHidden)
+                    $(innernodesaarray[j]).parent().hide();
             }
         }
     }
